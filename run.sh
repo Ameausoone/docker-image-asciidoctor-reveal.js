@@ -1,7 +1,7 @@
 cat > index.html <<EOF
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=slides/${INDEX}" />
+    <meta http-equiv="refresh" content="0; url=output/${INDEX}" />
   </head>
   <body/>
 </html>
