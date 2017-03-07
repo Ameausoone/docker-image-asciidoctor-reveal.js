@@ -1,35 +1,5 @@
 = Dockerize your application with AsciiDoctor-reveal.js image
 
-Live-edit and present your AsciiDoctor-reveal.js slides.
+Docker project to build and serve AsciiDoctor-reveal.js presentation.
 
-== Usage
-
-=== 1. Create your Slides
-
-You can follow this https://github.com/asciidoctor/asciidoctor-reveal.js/[tutorial]
-or check the samples in `test` directory to create your
-slides using AsciiDoctor.
-
-=== 2. Add Reveal.js Submodule
-
-You will need `reveal.js` scripts on the same directory as
-your slides to make it work:
-
-```bash
-git submodule add git://github.com/hakimel/reveal.js.git
-```
-
-=== 3. Start your container
-
-Run the following command to create a container:
-
-```bash
-docker run --rm -it -v "$PWD/test":/opt/slides -p 8000:8000 -e INDEX=history.html jeqo/asciidoctor-reveal.js
-```
-
-Map your volumes correctly to the directory where your slides
-are, in this case `./test`, then map the `8000` port, then (optionally)
-add `INDEX` environment variable to override the default URL when you open
-your browser pointing to `http://localhost:8000` and that's it.
-
-Open your browser and go to: http://localhost:8000
+More information here : https://github.com/Ameausoone/docker-asciidoctor-reveal.js-presentation
