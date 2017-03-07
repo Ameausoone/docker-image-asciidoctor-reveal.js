@@ -1,3 +1,5 @@
+image:https://travis-ci.org/Ameausoone/docker-image-asciidoctor-reveal.js.svg?branch=master["Build Status", link="https://travis-ci.org/Ameausoone/docker-image-asciidoctor-reveal.js"]
+
 = Dockerize your application with AsciiDoctor-reveal.js image
 
 Docker project to build and serve AsciiDoctor-reveal.js presentation.
