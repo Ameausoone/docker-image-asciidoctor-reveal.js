@@ -9,12 +9,15 @@ WORKDIR /opt
 RUN apk add --no-cache bash git openssh python make inotify-tools
 RUN gem install asciidoctor tilt thread_safe slim
 RUN git clone git://github.com/asciidoctor/asciidoctor-reveal.js.git /opt
+RUN mkdir /opt/output/
+RUN git clone git://github.com/hakimel/reveal.js.git /opt/output/
 
 ADD Makefile .
 ADD run.sh .
 RUN chmod +x run.sh
 
 VOLUME /opt/slides
+VOLUME /opt/output
 
 EXPOSE 8000
 
