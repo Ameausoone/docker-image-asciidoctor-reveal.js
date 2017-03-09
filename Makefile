@@ -6,6 +6,11 @@ default: $(patsubst %.adoc,%.html,$(TESTS))
 %.html: %.adoc
 	asciidoctor -T templates/slim -b revealjs -D output/ $<
 
+build/images:
+	rsync -rupE slides/images output/
+
+.PHONY: build/images
+
 clean:
 	rm -f output/*.html
 
